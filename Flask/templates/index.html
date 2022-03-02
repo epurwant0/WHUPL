@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shoes Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>auction_code</th>
+        <th>car_year</th>
+        <th>color</th>
+        <th>make</th>
+        <th>model</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in acura %}
+        <tr>
+          <td>{{ record['auction_code'] }}</td>
+          <td>{{ record['car_year'] }}</td>
+          <td>{{ record['color'] }}</td>
+          <td>{{ record['make'] }}</td>
+          <td>{{ record['model'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+
+</html>
